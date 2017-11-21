@@ -18,6 +18,8 @@ class QuizCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        title.adjustsFontSizeToFitWidth = true
+        title.minimumScaleFactor = 0.2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +27,5 @@ class QuizCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

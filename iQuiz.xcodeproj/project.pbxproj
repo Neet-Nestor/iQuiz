@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49341E6D1FB3B0A200FE87B5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341E6B1FB3B0A200FE87B5 /* QuestionViewController.swift */; };
+		49341E701FB3B0D000FE87B5 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341E6F1FB3B0D000FE87B5 /* AnswerViewController.swift */; };
+		49341E721FB3B0D900FE87B5 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341E711FB3B0D900FE87B5 /* FinishViewController.swift */; };
+		49341E741FB3B58000FE87B5 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341E731FB3B58000FE87B5 /* MasterViewController.swift */; };
+		494799C21FBE723200F0A341 /* popoverURLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494799C11FBE723200F0A341 /* popoverURLController.swift */; };
 		497785281FAFDEC700D12D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497785271FAFDEC700D12D65 /* AppDelegate.swift */; };
 		4977852A1FAFDEC700D12D65 /* QuizTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497785291FAFDEC700D12D65 /* QuizTableController.swift */; };
 		4977852D1FAFDEC700D12D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4977852B1FAFDEC700D12D65 /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49341E6B1FB3B0A200FE87B5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		49341E6F1FB3B0D000FE87B5 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		49341E711FB3B0D900FE87B5 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		49341E731FB3B58000FE87B5 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		494799C11FBE723200F0A341 /* popoverURLController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popoverURLController.swift; sourceTree = "<group>"; };
 		497785241FAFDEC700D12D65 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497785271FAFDEC700D12D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497785291FAFDEC700D12D65 /* QuizTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 				4977852E1FAFDEC700D12D65 /* Assets.xcassets */,
 				497785301FAFDEC700D12D65 /* LaunchScreen.storyboard */,
 				497785331FAFDEC700D12D65 /* Info.plist */,
+				49341E6B1FB3B0A200FE87B5 /* QuestionViewController.swift */,
+				49341E6F1FB3B0D000FE87B5 /* AnswerViewController.swift */,
+				49341E711FB3B0D900FE87B5 /* FinishViewController.swift */,
+				49341E731FB3B58000FE87B5 /* MasterViewController.swift */,
+				494799C11FBE723200F0A341 /* popoverURLController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -99,6 +114,7 @@
 				TargetAttributes = {
 					497785231FAFDEC700D12D65 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -141,7 +157,12 @@
 			files = (
 				4977853B1FAFE78F00D12D65 /* QuizCell.swift in Sources */,
 				4977852A1FAFDEC700D12D65 /* QuizTableController.swift in Sources */,
+				49341E701FB3B0D000FE87B5 /* AnswerViewController.swift in Sources */,
+				49341E6D1FB3B0A200FE87B5 /* QuestionViewController.swift in Sources */,
 				497785281FAFDEC700D12D65 /* AppDelegate.swift in Sources */,
+				49341E741FB3B58000FE87B5 /* MasterViewController.swift in Sources */,
+				49341E721FB3B0D900FE87B5 /* FinishViewController.swift in Sources */,
+				494799C21FBE723200F0A341 /* popoverURLController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +299,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5VTJF23RJ;
 				INFOPLIST_FILE = iQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.Nestor.iQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,9 +317,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5VTJF23RJ;
 				INFOPLIST_FILE = iQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.Nestor.iQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
